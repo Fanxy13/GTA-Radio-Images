@@ -23,7 +23,7 @@ const logoUrl = (id) => `${BASE}${id}.png`;   // logoUrl('3/chat')
 
 ## Notes
 
-- `3/game` is the GameSpy sponsor logo (Game Radio FM has no own logo), `3/head` is the in-game building texture, `4/the_vibe` is the in-game ad.
+- `3/head` is the in-game building texture, `4/the_vibe` is the in-game ad.
 - `lcs/lips` and `vcs/flash|vcpr|vrock|wave` reuse the logo of the same station from the earlier game.
 
 ## Regenerating
