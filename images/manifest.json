@@ -1,10 +1,10 @@
 {
   "3/chat": {
-    "path": "images/3/chat.svg",
+    "path": "images/3/chat.png",
     "source": "https://gta.fandom.com/wiki/File:ChatterboxFM-GTAIII-Logo.svg"
   },
   "3/class": {
-    "path": "images/3/class.svg",
+    "path": "images/3/class.png",
     "source": "https://gta.fandom.com/wiki/File:DoubleClefFM-GTAIII-Logo.svg"
   },
   "3/flash": {
@@ -20,15 +20,15 @@
     "source": "https://gta.fandom.com/wiki/File:HeadRadio-GTAIII-BuildingLogoTexture.png"
   },
   "3/kjah": {
-    "path": "images/3/kjah.jpg",
+    "path": "images/3/kjah.png",
     "source": "https://gta.fandom.com/wiki/File:KJah-GTAIII-Promotional-Logo.jpg"
   },
   "3/lips": {
-    "path": "images/3/lips.jpg",
+    "path": "images/3/lips.png",
     "source": "https://gta.fandom.com/wiki/File:Lips_106_gta3.jpg"
   },
   "3/msx": {
-    "path": "images/3/msx.svg",
+    "path": "images/3/msx.png",
     "source": "https://gta.fandom.com/wiki/File:MSXFM-GTAIII-Logo.svg"
   },
   "3/rise": {
@@ -124,7 +124,7 @@
     "source": "https://gta.fandom.com/wiki/File:WKTTRadio-GTAIV-Logo.png"
   },
   "lcs/double": {
-    "path": "images/lcs/double.svg",
+    "path": "images/lcs/double.png",
     "source": "https://gta.fandom.com/wiki/File:DoubleClefFM-GTALCS-Logo.svg"
   },
   "lcs/flash": {
@@ -136,11 +136,11 @@
     "source": "https://gta.fandom.com/wiki/File:HeadRadio-GTALCS-Logo.png"
   },
   "lcs/kjah": {
-    "path": "images/lcs/kjah.svg",
+    "path": "images/lcs/kjah.png",
     "source": "https://gta.fandom.com/wiki/File:K-JahRadio-GTALCS-Logo.svg"
   },
   "lcs/lcfr": {
-    "path": "images/lcs/lcfr.svg",
+    "path": "images/lcs/lcfr.png",
     "source": "https://gta.fandom.com/wiki/File:LibertyCityFreeRadio-GTALCS-Logo.svg"
   },
   "lcs/lcj": {
@@ -148,7 +148,7 @@
     "source": "https://gta.fandom.com/wiki/File:TheLibertyJam-GTALCS-LogoOptions.png"
   },
   "lcs/lips": {
-    "path": "images/lcs/lips.jpg",
+    "path": "images/lcs/lips.png",
     "source": "https://gta.fandom.com/wiki/File:Lips_106_gta3.jpg"
   },
   "lcs/msx": {
@@ -172,7 +172,7 @@
     "source": "https://gta.fandom.com/wiki/File:CSR1039-GTASA-Logo.png"
   },
   "sa/k-dst": {
-    "path": "images/sa/k-dst.jpg",
+    "path": "images/sa/k-dst.png",
     "source": "https://gta.fandom.com/wiki/File:K-DST-GTASA-Logo.jpg"
   },
   "sa/k-jah": {
@@ -208,11 +208,11 @@
     "source": "https://gta.fandom.com/wiki/File:WCTR-GTASA-Logo.png"
   },
   "vc/emotion": {
-    "path": "images/vc/emotion.svg",
+    "path": "images/vc/emotion.png",
     "source": "https://gta.fandom.com/wiki/File:Emotion98.3-GTAVC-Logo.svg"
   },
   "vc/espant": {
-    "path": "images/vc/espant.svg",
+    "path": "images/vc/espant.png",
     "source": "https://gta.fandom.com/wiki/File:RadioEspantoso-GTAVC-Logo.svg"
   },
   "vc/fever": {
@@ -224,19 +224,19 @@
     "source": "https://gta.fandom.com/wiki/File:FlashFM-GTAVC-Logo.png"
   },
   "vc/kchat": {
-    "path": "images/vc/kchat.svg",
+    "path": "images/vc/kchat.png",
     "source": "https://gta.fandom.com/wiki/File:KChat-GTAVC-Logo.svg"
   },
   "vc/vcpr": {
-    "path": "images/vc/vcpr.svg",
+    "path": "images/vc/vcpr.png",
     "source": "https://gta.fandom.com/wiki/File:ViceCityPublicRadio-GTAVC-Logo.svg"
   },
   "vc/vrock": {
-    "path": "images/vc/vrock.svg",
+    "path": "images/vc/vrock.png",
     "source": "https://gta.fandom.com/wiki/File:V-Rock-GTAVC-Logo.svg"
   },
   "vc/wave": {
-    "path": "images/vc/wave.svg",
+    "path": "images/vc/wave.png",
     "source": "https://gta.fandom.com/wiki/File:Wave103-GTAVC-Logo.svg"
   },
   "vc/wild": {
@@ -256,27 +256,27 @@
     "source": "https://gta.fandom.com/wiki/File:FlashFM-GTAVC-Logo.png"
   },
   "vcs/fresh": {
-    "path": "images/vcs/fresh.svg",
+    "path": "images/vcs/fresh.png",
     "source": "https://gta.fandom.com/wiki/File:FreshFM-GTAVCS-Logo.svg"
   },
   "vcs/paradise": {
-    "path": "images/vcs/paradise.svg",
+    "path": "images/vcs/paradise.png",
     "source": "https://gta.fandom.com/wiki/File:ParadiseFM-GTAVCS-Logo.svg"
   },
   "vcs/vcfl": {
-    "path": "images/vcs/vcfl.svg",
+    "path": "images/vcs/vcfl.png",
     "source": "https://gta.fandom.com/wiki/File:VCFL-GTAVCS-Logo.svg"
   },
   "vcs/vcpr": {
-    "path": "images/vcs/vcpr.svg",
+    "path": "images/vcs/vcpr.png",
     "source": "https://gta.fandom.com/wiki/File:ViceCityPublicRadio-GTAVC-Logo.svg"
   },
   "vcs/vrock": {
-    "path": "images/vcs/vrock.svg",
+    "path": "images/vcs/vrock.png",
     "source": "https://gta.fandom.com/wiki/File:V-Rock-GTAVC-Logo.svg"
   },
   "vcs/wave": {
-    "path": "images/vcs/wave.svg",
+    "path": "images/vcs/wave.png",
     "source": "https://gta.fandom.com/wiki/File:Wave103-GTAVC-Logo.svg"
   }
 }

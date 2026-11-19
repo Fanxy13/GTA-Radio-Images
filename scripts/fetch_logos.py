@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
-"""Download station logos listed in logo-map.json from the GTA Wiki (Fandom)
-into images/<key>.<ext> and write images/manifest.json.
+"""Download station logos listed in logo-map.json from the GTA Wiki (Fandom),
+convert every one to a 512x512 PNG (logo scaled to fit, transparent padding)
+and write images/<key>.png plus images/manifest.json.
 
-Usage: python3 scripts/fetch_logos.py
+Usage: pip install pillow cairosvg && python3 scripts/fetch_logos.py
 """
-import json, os, sys, time, urllib.parse, urllib.request
+import io, json, os, sys, time, urllib.parse, urllib.request
+
+import cairosvg
+from PIL import Image
+
+SIZE = 512      # output is SIZE x SIZE
+PAD = 16        # transparent margin around the logo
 
 API = "https://gta.fandom.com/api.php"
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -20,6 +27,21 @@ def http(url):
             if i == 3:
                 raise
             time.sleep(1 + i)
+
+
+def to_square_png(data, is_svg):
+    if is_svg:
+        data = cairosvg.svg2png(bytestring=data, output_width=SIZE * 2)
+    img = Image.open(io.BytesIO(data)).convert("RGBA")
+    bbox = img.getchannel("A").getbbox()      # trim transparent borders
+    if bbox:
+        img = img.crop(bbox)
+    box = SIZE - 2 * PAD
+    scale = min(box / img.width, box / img.height)
+    img = img.resize((max(1, round(img.width * scale)), max(1, round(img.height * scale))), Image.LANCZOS)
+    canvas = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
+    canvas.paste(img, ((SIZE - img.width) // 2, (SIZE - img.height) // 2), img)
+    return canvas
 
 
 def image_urls(titles):
@@ -52,12 +74,12 @@ def main():
         if not url:
             missing.append(key)
             continue
-        ext = os.path.splitext(fname)[1].lower()
-        rel = f"images/{key}{ext}"
+        rel = f"images/{key}.png"
         dest = os.path.join(ROOT, rel)
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         if not os.path.exists(dest):
-            open(dest, "wb").write(http(url))
+            is_svg = fname.lower().endswith(".svg")
+            to_square_png(http(url), is_svg).save(dest, optimize=True)
         manifest[key] = {
             "path": rel,
             "source": "https://gta.fandom.com/wiki/File:" + urllib.parse.quote(fname.replace(" ", "_")),
