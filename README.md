@@ -4,23 +4,22 @@ Radio station logos for the GTA radio website, one image per station.
 Keys are identical to the station ids of the radio API (`<game>/<station>`).
 
 ```
-images/3/chat.svg
+images/3/chat.png
 images/4/liberty_rock.png
-images/sa/k-dst.jpg
+images/sa/k-dst.png
 images/manifest.json   # key -> { path, source }
 ```
 
-The file extension differs per station (svg/png/jpg/gif), so look the path up in the manifest.
+All images are PNG, exactly 512x512 px (1:1), logo scaled proportionally and centered on a transparent background.
 
 ## Use on the website
 
 ```js
-const BASE = 'https://raw.githubusercontent.com/fanxy13/gta-radio-images/main/';
-const manifest = await (await fetch(BASE + 'images/manifest.json')).json();
-const logoUrl = (id) => BASE + manifest[id].path;   // logoUrl('3/chat')
+const BASE = 'https://raw.githubusercontent.com/fanxy13/gta-radio-images/main/images/';
+const logoUrl = (id) => `${BASE}${id}.png`;   // logoUrl('3/chat')
 ```
 
-(For production traffic prefer jsDelivr: `https://cdn.jsdelivr.net/gh/fanxy13/gta-radio-images@main/images/...`)
+(For production traffic prefer jsDelivr: `https://cdn.jsdelivr.net/gh/fanxy13/gta-radio-images@main/images/<id>.png`)
 
 ## Notes
 
@@ -29,7 +28,7 @@ const logoUrl = (id) => BASE + manifest[id].path;   // logoUrl('3/chat')
 
 ## Regenerating
 
-`python3 scripts/fetch_logos.py` re-downloads everything listed in `scripts/logo-map.json` from the GTA Wiki; `source` in the manifest links each file's wiki page.
+`pip install pillow cairosvg && python3 scripts/fetch_logos.py` re-downloads everything listed in `scripts/logo-map.json` from the GTA Wiki and converts it to 512x512 PNG; `source` in the manifest links each file's wiki page.
 
 ## Copyright
 
