@@ -23,7 +23,8 @@ const logoUrl = (id) => `${BASE}${id}.png`;   // logoUrl('3/chat')
 
 ## Notes
 
-- `3/head` is the in-game building texture, `4/the_vibe` is the in-game ad.
+- `3/head` is the in-game building texture.
+- `4/the_vibe` is a hand-made image (background removed); it is marked `null` in `scripts/logo-map.json` so the fetch script keeps it.
 - `lcs/lips` and `vcs/flash|vcpr|vrock|wave` reuse the logo of the same station from the earlier game.
 
 ## Regenerating
