@@ -67,9 +67,14 @@ def image_urls(titles):
 
 def main():
     mapping = json.load(open(os.path.join(HERE, "logo-map.json")))
-    urls = image_urls(sorted(set(mapping.values())))
+    urls = image_urls(sorted({v for v in mapping.values() if v}))
     manifest, missing = {}, []
     for key, fname in mapping.items():
+        if fname is None:  # custom, hand-made image: keep the existing file
+            rel = f"images/{key}.png"
+            assert os.path.exists(os.path.join(ROOT, rel)), rel
+            manifest[key] = {"path": rel, "source": "custom"}
+            continue
         url = urls.get(fname) or urls.get(fname.replace("_", " "))
         if not url:
             missing.append(key)
