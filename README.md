@@ -23,13 +23,20 @@ const logoUrl = (id) => `${BASE}${id}.png`;   // logoUrl('3/chat')
 
 ## Notes
 
-- `3/head` is the in-game building texture.
-- `4/the_vibe` is a hand-made image (background removed); it is marked `null` in `scripts/logo-map.json` so the fetch script keeps it.
+- All logos are transparent PNGs. SVG sources are rendered crisp, small raster sources are upscaled with smoothing and sharpening.
+- `3/head` is the in-game building texture (background removed).
+- `lcs/kjah` keeps its black square: it is part of the badge (leaves and stripes).
+- `4/the_vibe` is a hand-made image: its source is `scripts/custom/the_vibe.png`.
 - `lcs/lips` and `vcs/flash|vcpr|vrock|wave` reuse the logo of the same station from the earlier game.
 
 ## Regenerating
 
-`pip install pillow cairosvg && python3 scripts/fetch_logos.py` re-downloads everything listed in `scripts/logo-map.json` from the GTA Wiki and converts it to 512x512 PNG; `source` in the manifest links each file's wiki page.
+```bash
+pip install pillow cairosvg numpy scipy opencv-python-headless
+python3 scripts/fetch_logos.py
+```
+
+This downloads everything listed in `scripts/logo-map.json` from the GTA Wiki (plus local files from `scripts/custom/`), removes backgrounds where configured, and writes 512x512 PNGs and `images/manifest.json`. `source` in the manifest links each file's wiki page.
 
 ## Copyright
 
